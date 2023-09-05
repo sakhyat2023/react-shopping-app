@@ -1,8 +1,53 @@
-# React + Vite
+# Shopping App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a shopping app built with React. It allows users to browse products, add items to a cart, and remove items from the cart.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Users can view a list of products
+- Users can add items to the cart
+- Users can remove items from the cart
+
+## Technologies
+
+This app is built with the following technologies:
+
+- React
+- MUI Icon
+- Context API
+
+## API
+
+This app uses the [Fake Store API](https://fakestoreapi.com/) to fetch the product data.
+
+## Instructions
+
+To run this app locally, follow these steps:
+
+1. Clone the repository:
+
+
+git clone [https://github.com/your-username/react-shopping-app.git](https://github.com/sakhyat2023/shopping_cart)
+
+
+2. Navigate to the project's directory:
+
+
+cd shopping_cart
+
+
+3. Install the dependencies:
+
+
+npm install
+
+
+4. Start the app:
+
+
+npm start
+
+
+5. Open your browser and visit [http://localhost:3000](http://localhost:3000) to view the app.
+
+That's it! You can now browse products, add items to the cart, and remove items from the cart.
