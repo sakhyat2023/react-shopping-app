@@ -5,7 +5,7 @@ import { CartContext } from "../context/CartContext";
 const Sidebar = ({ setSidebarOpen }) => {
   const { cart } = useContext(CartContext);
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${cart.length > 4 ? "sidebarOver" : ""}`}>
       <div className="sidebar-info">
         <div className="sidebar-header">
           <span>Your Cart</span>
@@ -14,6 +14,7 @@ const Sidebar = ({ setSidebarOpen }) => {
           </button>
         </div>
         <div className="cart-content">
+        {cart.length === 0 && "Your shopping cart is empty!"}
           {cart.map((item) => (
             <CartItem key={item.id} item={item} />
           ))}

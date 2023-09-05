@@ -26,6 +26,9 @@ button {
   z-index: 10;
   height: 100%;
 }
+.sidebarOver{
+  overflow-y: scroll;
+}
 .sidebar-info {
   padding: 0 2rem;
   width: 25rem;
