@@ -107,6 +107,12 @@ button {
   gap: 0.5rem;
   border-bottom: 2px solid;
 }
+.cart .total{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
 .cart-info {
   display: flex;
   align-items: center;

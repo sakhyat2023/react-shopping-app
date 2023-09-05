@@ -16,7 +16,10 @@ const CartItem = ({item}) => {
           <DeleteIcon fontSize="small" />
         </button>
       </div>
+      <div className="total">
       <span>Price: {currencyFormate(item.price)}</span>
+      <span> Item: {item.amount}</span>
+      </div>
     </div>
   );
 };
