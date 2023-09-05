@@ -4,7 +4,7 @@ import CartItem from "./CartItem";
 import { CartContext } from "../context/CartContext";
 import { currencyFormate } from "../lib/currencyFormate";
 const Sidebar = ({ setSidebarOpen }) => {
-  const { cart, getTotalPrice } = useContext(CartContext);
+  const { cart, isOpen,setIsOpen, getTotalPrice } = useContext(CartContext);
   return (
     <div>
       <div className="overlay"></div>
@@ -12,7 +12,7 @@ const Sidebar = ({ setSidebarOpen }) => {
         <div>
           <div className="sidebar-header">
             <span>Your Cart</span>
-            <button onClick={() => setSidebarOpen((prev) => !prev)}>
+            <button onClick={() => setIsOpen((prev) => !prev)}>
               <CloseIcon fontSize="small" />
             </button>
           </div>
