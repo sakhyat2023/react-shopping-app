@@ -2,10 +2,11 @@ import React, { useContext } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import CartItem from "./CartItem";
 import { CartContext } from "../context/CartContext";
+import { currencyFormate } from "../lib/currencyFormate";
 const Sidebar = ({ setSidebarOpen }) => {
-  const { cart } = useContext(CartContext);
+  const { cart, getTotalPrice } = useContext(CartContext);
   return (
-    <div className={`sidebar ${cart.length > 4 ? "sidebarOver" : ""}`}>
+    <div className={`sidebar ${cart.length > 3 && "sidebarOver"}`}>
       <div className="sidebar-info">
         <div className="sidebar-header">
           <span>Your Cart</span>
@@ -22,7 +23,7 @@ const Sidebar = ({ setSidebarOpen }) => {
         <div className="cart-footer">
           <div className="price">
             <span>Total Price:</span>
-            <span>12,00</span>
+            <span>{currencyFormate(getTotalPrice())}</span>
           </div>
           <button>Checkout</button>
         </div>
