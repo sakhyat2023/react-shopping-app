@@ -6,19 +6,22 @@ import { currencyFormate } from "../lib/currencyFormate";
 const Sidebar = ({ setSidebarOpen }) => {
   const { cart, getTotalPrice } = useContext(CartContext);
   return (
-    <div className={`sidebar ${cart.length > 3 && "sidebarOver"}`}>
-      <div className="sidebar-info">
-        <div className="sidebar-header">
-          <span>Your Cart</span>
-          <button onClick={() => setSidebarOpen((prev) => !prev)}>
-            <CloseIcon fontSize="small" />
-          </button>
-        </div>
-        <div className="cart-content">
-        {cart.length === 0 && "Your shopping cart is empty!"}
-          {cart.map((item) => (
-            <CartItem key={item.id} item={item} />
-          ))}
+    <div>
+      <div className="overlay"></div>
+      <div className="sidebar">
+        <div>
+          <div className="sidebar-header">
+            <span>Your Cart</span>
+            <button onClick={() => setSidebarOpen((prev) => !prev)}>
+              <CloseIcon fontSize="small" />
+            </button>
+          </div>
+          <div className="cart-content">
+            {cart.length === 0 && "Your shopping cart is empty!"}
+            {cart.map((item) => (
+              <CartItem key={item.id} item={item} />
+            ))}
+          </div>
         </div>
         <div className="cart-footer">
           <div className="price">
