@@ -1,20 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { currencyFormate } from "../lib/currencyFormate";
-const CartItem = () => {
+import { CartContext } from "../context/CartContext";
+const CartItem = ({item}) => {
+  const {removeItem} = useContext(CartContext)
   return (
     <div className="cart">
       <div className="cart-info">
         <img
-          src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-          alt=""
+          src={item.image}
+          alt={item.title}
         />
-        <span>Mens Casual Premium Slim Fit T-Shirts</span>
-        <button>
+        <span>{item.title}</span>
+        <button onClick={() => removeItem(item.id)}>
           <DeleteIcon fontSize="small" />
         </button>
       </div>
-      <span>{currencyFormate(109)}</span>
+      <span>Price: {currencyFormate(item.price)}</span>
     </div>
   );
 };
