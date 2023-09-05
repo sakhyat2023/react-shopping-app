@@ -7,7 +7,7 @@ import { CartContext } from "../context/CartContext";
 const Navbar = () => {
   const { cart, isOpen, setIsOpen } = useContext(CartContext);
   return (
-    <nav className="menu">
+    <div className="menu">
       <div className="logo">Shopping Cart Application</div>
       <button onClick={() => setIsOpen((prev) => !prev)} className="">
         <Badge
@@ -18,7 +18,7 @@ const Navbar = () => {
         </Badge>
       </button>
       {isOpen && <Sidebar />}
-    </nav>
+    </div>
   );
 };
 
