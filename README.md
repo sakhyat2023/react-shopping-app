@@ -33,7 +33,7 @@ git clone [https://github.com/sakhyat2023/react-shopping-app.git](https://github
 2. Navigate to the project's directory:
 
 
-cd shopping-cart-app
+cd react-shopping-app
 
 
 3. Install the dependencies:
