@@ -1,5 +1,6 @@
 import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
+import CartItem from "./CartItem";
 const Sidebar = ({ setSidebarOpen }) => {
   return (
     <div className="sidebar">
@@ -11,13 +12,9 @@ const Sidebar = ({ setSidebarOpen }) => {
           </button>
         </div>
         <div className="cart-content">
-          <img
-            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-            alt=""
-          />
-          <h1>welcome</h1>
+          <CartItem />
         </div>
-        <div className="cart-item">
+        <div className="cart-footer">
           <div className="price">
             <span>Total</span>
             <span>12,00</span>
