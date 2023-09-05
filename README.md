@@ -45,9 +45,9 @@ npm install
 4. Start the app:
 
 
-npm start
+npm run dev
 
 
-5. Open your browser and visit [http://localhost:3000](http://localhost:3000) to view the app.
+5. Open your browser and visit [http://127.0.0.1:5173/](http://127.0.0.1:5173/) to view the app.
 
 That's it! You can now browse products, add items to the cart, and remove items from the cart.
